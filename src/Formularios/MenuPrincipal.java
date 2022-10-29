@@ -38,7 +38,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel1.setText("Menú Principal");
 
-        jtb_Aventura.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 11\\Documents\\Programacion II\\Imagenes\\Aventuras1.jpg")); // NOI18N
+        jtb_Aventura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Aventuras1.jpg"))); // NOI18N
         jtb_Aventura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtb_AventuraActionPerformed(evt);
@@ -47,7 +47,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel2.setText("Aventura");
 
-        jtb_Ciencia.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 11\\Documents\\Programacion II\\Imagenes\\Ciencia Ficcion2.jpg")); // NOI18N
+        jtb_Ciencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ciencia Ficcion2.jpg"))); // NOI18N
         jtb_Ciencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtb_CienciaActionPerformed(evt);
@@ -56,7 +56,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel3.setText("Ciencia Ficción");
 
-        jtb_cuento.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 11\\Documents\\Programacion II\\Imagenes\\Cuento de hadas1.jpg")); // NOI18N
+        jtb_cuento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cuentos de hada.jpg"))); // NOI18N
         jtb_cuento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtb_cuentoActionPerformed(evt);
@@ -82,14 +82,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(203, 203, 203)
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jtb_cuento, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(222, 222, 222)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jtb_cuento, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -105,9 +105,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtb_cuento, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addContainerGap(32, Short.MAX_VALUE))
         );

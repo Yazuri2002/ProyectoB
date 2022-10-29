@@ -2,31 +2,30 @@
 package Clases;
 
 import Conexion_Base_de_Datos.Cls_Conexion;
-import com.sun.jdi.connect.spi.Connection;
-import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import java.util.Date;
 
-public class ClsUsuarios {
 
-    private final String SQL_INSERT = " INSERT INTO Usuarios ( id_Usuarios, Nombre, Apellido, Correo_Electronico, Contraseña) values(?,?,?,?,?) " ;
+public class Cls_Pago {
+
+
+    private final String SQL_INSERT = " INSERT INTO Pago ( id_Pago, Numero_de_Tarjeta, Fecha_expiracion, Correo_Electronico, Codigo_seguridad, Nombre_Titular, correo_electronico) values(Auto increment,?,?,?,?,?,?) " ;
     private PreparedStatement PS ;
     private final Cls_Conexion CN;
     
     
-    public ClsUsuarios(){
+    public Cls_Pago(){
         PS = null;
         CN = new Cls_Conexion();
         
     }
     
-    public int insertarDatos (int id, String nom, String ap, String co, String con) throws SQLException{
+    public int insertarDatos (int id, int num, String ap, String co, String con) throws SQLException{
         try{
             PS = CN.getConnection().prepareStatement(SQL_INSERT);  
             PS.setInt(1,id);
-            PS.setString(2,nom);
+            PS.setInt(2,num);
             PS.setString(3,ap);
             PS.setString(4, co);
             PS.setString(5, con);
@@ -45,12 +44,4 @@ public class ClsUsuarios {
        return 0;
     }
     
-    
-         
-    
 
-    public void insertarDatos(int id, String nom, String ap, String fe, String ge, String co, String con) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-}
